@@ -1,36 +1,36 @@
 package main
 
-import (
-	"errors"
-	"fmt"
-)
+// import (
+// 	"errors"
+// 	"fmt"
+// )
 
-var (
-	ValidationError = errors.New("validation error")
-	NotFoundError = errors.New("not found error")
-)
+// var (
+// 	ValidationError = errors.New("validation error")
+// 	NotFoundError = errors.New("not found error")
+// )
 
-func GetById(id string) error {
-	if id == "" {
-		return ValidationError
-	}
+// func GetById(id string) error {
+// 	if id == "" {
+// 		return ValidationError
+// 	}
 
-	if id != "yudha" {
-		return NotFoundError
-	}
+// 	if id != "yudha" {
+// 		return NotFoundError
+// 	}
 
-	return nil
-}
+// 	return nil
+// }
 
-func main() {
-	err := GetById("")
-	if err != nil {
-		if errors.Is(err, ValidationError) {
-			fmt.Println("validation error")
-		} else if errors.Is(err, NotFoundError) {
-			fmt.Println("not found error")
-		} else {
-			fmt.Println("unknown error")
-		}
-	}
-}
+// func main() {
+// 	err := GetById("")
+// 	if err != nil {
+// 		if errors.Is(err, ValidationError) {
+// 			fmt.Println("validation error")
+// 		} else if errors.Is(err, NotFoundError) {
+// 			fmt.Println("not found error")
+// 		} else {
+// 			fmt.Println("unknown error")
+// 		}
+// 	}
+// }
